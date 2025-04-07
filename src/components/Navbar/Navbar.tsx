@@ -45,8 +45,8 @@ const Navbar: FC = () => {
 
   return useMemo(
     () => (
-      <div className='bg-black px-6'>
-        <div className='container mx-auto flex'>
+      <div className='fixed top-0 right-0 left-0'>
+        <div className='container mx-auto mt-3 flex rounded bg-black px-8 shadow-xl'>
           {/* i18n configuration */}
           <div className='mr-auto flex items-center text-white'>
             <div
@@ -77,7 +77,7 @@ interface NavbarItemProps extends Item {}
 
 const NavbarItem: FC<NavbarItemProps> = ({ title, icon }) => {
   return (
-    <div className='group relative mr-8 py-2 text-lg font-semibold text-white uppercase last-of-type:mr-0 hover:cursor-pointer'>
+    <div className='group relative mr-8 py-4 text-lg font-semibold text-white uppercase last-of-type:mr-0 hover:cursor-pointer'>
       <FontAwesomeIcon icon={icon} className='mr-2' />
       {title}
       <hr className='absolute right-0 bottom-0 left-0 w-0 border-white transition-all group-hover:w-full group-hover:border-b' />
