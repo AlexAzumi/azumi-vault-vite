@@ -45,7 +45,7 @@ const Navbar: FC = () => {
 
   return useMemo(
     () => (
-      <div className='fixed top-0 right-0 left-0'>
+      <div className='fixed top-0 right-0 left-0 z-20'>
         <div className='container mx-auto mt-3 flex rounded bg-black px-8 shadow-xl'>
           {/* i18n configuration */}
           <div className='mr-auto flex items-center text-white'>
