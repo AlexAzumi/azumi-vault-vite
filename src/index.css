@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: Inconsolata;
+  src: url('../src/assets/fonts/Inconsolata-Regular.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url('../src/assets/fonts/Inconsolata-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@theme {
+  --default-font-family: Inconsolata, 'sans-serif';
+}
+
+body {
+  background-color: var(--color-gray-900);
+}
