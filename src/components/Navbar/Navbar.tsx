@@ -6,41 +6,70 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC } from 'react'
+import { FC, useCallback, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Item {
   title: string
   icon: IconDefinition
 }
 
-const NAVBAR_ITEMS: Item[] = [
-  {
-    title: 'Inicio',
-    icon: faHome,
-  },
-  {
-    title: 'Sobre mí',
-    icon: faIdCardClip,
-  },
-  {
-    title: 'Mis proyectos',
-    icon: faDiagramProject,
-  },
-  {
-    title: 'Contacto',
-    icon: faEnvelope,
-  },
-]
-
 const Navbar: FC = () => {
-  return (
-    <div className='bg-black px-6'>
-      <div className='container mx-auto flex justify-end'>
-        {NAVBAR_ITEMS.map((data, idx) => (
-          <NavbarItem key={`navbar-item-${idx}`} {...data} />
-        ))}
+  const { t, i18n } = useTranslation()
+
+  const NAVBAR_ITEMS = useMemo(
+    () => [
+      {
+        title: t('navbar.home'),
+        icon: faHome,
+      },
+      {
+        title: t('navbar.aboutMe'),
+        icon: faIdCardClip,
+      },
+      {
+        title: t('navbar.myProjects'),
+        icon: faDiagramProject,
+      },
+      {
+        title: t('navbar.contact'),
+        icon: faEnvelope,
+      },
+    ],
+    [t],
+  )
+
+  const changeLanguage = useCallback((language: string) => {
+    i18n.changeLanguage(language)
+  }, [])
+
+  return useMemo(
+    () => (
+      <div className='bg-black px-6'>
+        <div className='container mx-auto flex'>
+          {/* i18n configuration */}
+          <div className='mr-auto flex items-center text-white'>
+            <div
+              className={`hover:cursor-pointer ${i18n.language.includes('en') ? 'underline' : ''}`}
+              onClick={() => changeLanguage('en')}
+            >
+              ENGLISH
+            </div>
+            <div className='mx-2'>|</div>
+            <div
+              className={`hover:cursor-pointer ${i18n.language.includes('es') ? 'underline' : ''}`}
+              onClick={() => changeLanguage('es')}
+            >
+              ESPAÑOL
+            </div>
+          </div>
+          {NAVBAR_ITEMS.map((data, idx) => (
+            <NavbarItem key={`navbar-item-${idx}`} {...data} />
+          ))}
+        </div>
       </div>
-    </div>
+    ),
+    [NAVBAR_ITEMS, i18n.language],
   )
 }
 
