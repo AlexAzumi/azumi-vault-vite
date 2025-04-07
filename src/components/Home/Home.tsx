@@ -1,8 +1,11 @@
 import { Canvas, ThreeElements, useFrame } from '@react-three/fiber'
 import { FC, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
 const Home: FC = () => {
+  const { t } = useTranslation()
+
   return (
     <div className='relative flex h-screen w-screen max-w-full'>
       {/* Three.js canvas */}
@@ -29,7 +32,7 @@ const Home: FC = () => {
           <h1 className='mb-4 text-7xl font-semibold text-green-600'>
             Alejandro Suárez
           </h1>
-          <h3 className='text-xl text-white'>Desarrollador de software</h3>
+          <h3 className='text-xl text-white'>{t('home.career')}</h3>
         </div>
       </div>
     </div>

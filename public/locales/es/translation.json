@@ -4,5 +4,8 @@
     "aboutMe": "Sobre mí",
     "myProjects": "Mis proyectos",
     "contact": "Contacto"
+  },
+  "home": {
+    "career": "Desarrollador web full-stack"
   }
 }
