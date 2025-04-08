@@ -1,4 +1,4 @@
-import { Canvas, ThreeElements, useFrame } from '@react-three/fiber'
+import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber'
 import { FC, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
@@ -23,12 +23,12 @@ const Home: FC = () => {
             decay={0}
             intensity={Math.PI * 4}
           />
-          <Box position={[2.3, -0.2, 0]} rotation={[0.1, 0, 0.1]} />
+          <Box position={[0, 0, 0]} rotation={[0.1, 0, 0.1]} />
         </Canvas>
       </div>
       {/* On top data */}
       <div className='absolute top-20 right-0 bottom-20 left-0 flex'>
-        <div className='container mx-auto flex flex-col items-start justify-center'>
+        <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6 lg:px-0'>
           <h1 className='mb-4 text-7xl font-semibold text-green-600'>
             Alejandro Suárez
           </h1>
@@ -41,13 +41,14 @@ const Home: FC = () => {
 
 const Box = (props: ThreeElements['mesh']) => {
   const meshRef = useRef<THREE.Mesh>(null!)
+  const { width } = useThree((state) => state.viewport)
 
   useFrame((_, delta) => {
     meshRef.current.rotateY(delta * 0.2)
   })
 
   return (
-    <mesh {...props} ref={meshRef}>
+    <mesh {...props} position={[width / 4.5, 0, 0]} ref={meshRef}>
       <sphereGeometry args={[1.8]} />
       <meshStandardMaterial
         color='green'
