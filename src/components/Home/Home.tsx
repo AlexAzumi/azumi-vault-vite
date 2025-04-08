@@ -72,6 +72,7 @@ const Home: FC = () => {
 
 const Box = (props: ThreeElements['mesh']) => {
   const meshRef = useRef<THREE.Mesh>(null!)
+
   const { width } = useThree((state) => state.viewport)
 
   useFrame((_, delta) => {
@@ -79,13 +80,9 @@ const Box = (props: ThreeElements['mesh']) => {
   })
 
   return (
-    <mesh {...props} position={[width / 4.5, 0, 0]} ref={meshRef}>
+    <mesh {...props} ref={meshRef} position={[width / 4.5, 0, 0]}>
       <sphereGeometry args={[1.8]} />
-      <meshStandardMaterial
-        color='green'
-        wireframe={true}
-        wireframeLinewidth={1}
-      />
+      <meshStandardMaterial color='green' wireframe={true} />
     </mesh>
   )
 }
