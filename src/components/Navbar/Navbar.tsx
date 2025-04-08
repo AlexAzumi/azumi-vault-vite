@@ -121,6 +121,12 @@ const Navbar: FC = () => {
             ))}
           </div>
         </div>
+        {!collapsed && (
+          <div
+            className='w-max-full h-screen w-screen'
+            onClick={toggleCollapse}
+          />
+        )}
       </div>
     ),
     [NAVBAR_ITEMS, i18n.language, collapsed],
