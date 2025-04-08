@@ -7,5 +7,11 @@
   },
   "home": {
     "career": "Desarrollador web full-stack"
+  },
+  "aboutMe": {
+    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-400'>Alejandro Suárez</div>.",
+    "secondText": "Soy <div class='inline-block text-green-400'>desarrollador web</div> desde 2018.",
+    "thirdText": "Tengo más de dos años de experiencia laboral trabajando con <div class='inline-block text-green-500'>React</div>, <div class='inline-block text-green-500'>Tailwind</div>, <div class='inline-block text-green-500'>Node.js</div> y <div class='inline-block text-green-500'>TypeScript</div>.",
+    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-500'>Unity Engine</div>, <div class='inline-block text-green-500'>React Native</div>, <div class='inline-block text-green-500'>Git</div>, <div class='inline-block text-green-500'> bases de datos relacionales</div> y <div class='inline-block text-green-500'>C#</div>."
   }
 }

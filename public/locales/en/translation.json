@@ -7,5 +7,11 @@
   },
   "home": {
     "career": "Full-stack web developer"
+  },
+  "aboutMe": {
+    "firstText": "Hello, my name is <div class='inline-block text-green-400'>Alejandro Suárez</div>.",
+    "secondText": "I've been a <div class='inline-block text-green-400'>web developer</div> since 2018.",
+    "thirdText": "I have more than two years of work experience using <div class='inline-block text-green-500'>React</div>, <div class='inline-block text-green-500'>Tailwind</div>, <div class='inline-block text-green-500'>Node.js</div> and <div class='inline-block text-green-500'>TypeScript</div>.",
+    "fourthText": "I also have experience using tools like <div class='inline-block text-green-500'>Unity Engine</div>, <div class='inline-block text-green-500'>React Native</div>, <div class='inline-block text-green-500'>Git</div>, <div class='inline-block text-green-500'>relational databases</div> and <div class='inline-block text-green-500'>C#</div>."
   }
 }
