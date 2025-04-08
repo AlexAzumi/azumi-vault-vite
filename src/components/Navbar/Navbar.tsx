@@ -113,7 +113,11 @@ const Navbar: FC = () => {
             className={`flex h-full flex-col overflow-y-hidden transition-all ${collapsed ? 'max-h-0' : 'max-h-full'}`}
           >
             {NAVBAR_ITEMS.map((data, idx) => (
-              <NavbarItem key={`navbar-item-${idx}`} {...data} />
+              <NavbarItem
+                key={`navbar-item-${idx}`}
+                {...data}
+                onClick={toggleCollapse}
+              />
             ))}
           </div>
         </div>
@@ -123,13 +127,16 @@ const Navbar: FC = () => {
   )
 }
 
-interface NavbarItemProps extends Item {}
+interface NavbarItemProps extends Item {
+  onClick?(): void
+}
 
-const NavbarItem: FC<NavbarItemProps> = ({ title, icon, href }) => {
+const NavbarItem: FC<NavbarItemProps> = ({ title, icon, href, onClick }) => {
   return (
     <a
       className='group relative py-4 text-center text-lg font-semibold text-white uppercase transition-colors last-of-type:mr-0 last-of-type:pb-0 hover:cursor-pointer hover:text-green-500 lg:mr-8 lg:text-left'
       href={href}
+      onClick={onClick}
     >
       <FontAwesomeIcon icon={icon} className='mr-2' />
       {title}
