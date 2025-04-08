@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next'
 interface Item {
   title: string
   icon: IconDefinition
+  href: string
 }
 
 const Navbar: FC = () => {
@@ -25,18 +26,22 @@ const Navbar: FC = () => {
       {
         title: t('navbar.home'),
         icon: faHome,
+        href: '#home',
       },
       {
         title: t('navbar.aboutMe'),
         icon: faIdCardClip,
+        href: '#about-me',
       },
       {
         title: t('navbar.myProjects'),
         icon: faDiagramProject,
+        href: '#my-projects',
       },
       {
         title: t('navbar.contact'),
         icon: faEnvelope,
+        href: '#contact',
       },
     ],
     [t],
@@ -120,13 +125,16 @@ const Navbar: FC = () => {
 
 interface NavbarItemProps extends Item {}
 
-const NavbarItem: FC<NavbarItemProps> = ({ title, icon }) => {
+const NavbarItem: FC<NavbarItemProps> = ({ title, icon, href }) => {
   return (
-    <div className='group relative py-4 text-center text-lg font-semibold text-white uppercase last-of-type:mr-0 last-of-type:pb-0 hover:cursor-pointer lg:mr-8 lg:text-left'>
+    <a
+      className='group relative py-4 text-center text-lg font-semibold text-white uppercase transition-colors last-of-type:mr-0 last-of-type:pb-0 hover:cursor-pointer hover:text-green-500 lg:mr-8 lg:text-left'
+      href={href}
+    >
       <FontAwesomeIcon icon={icon} className='mr-2' />
       {title}
-      <hr className='absolute right-0 bottom-0 left-0 w-0 border-white transition-all group-hover:w-full group-hover:border-b' />
-    </div>
+      <hr className='absolute right-0 bottom-0 left-0 w-0 border-green-500 transition-all group-hover:w-full group-hover:border-b' />
+    </a>
   )
 }
 

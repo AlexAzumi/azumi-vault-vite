@@ -13,7 +13,7 @@ const Home: FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='relative flex h-screen w-screen max-w-full'>
+    <div id='home' className='relative flex h-screen w-screen max-w-full'>
       {/* Three.js canvas */}
       <div className='container mx-auto'>
         <Canvas
