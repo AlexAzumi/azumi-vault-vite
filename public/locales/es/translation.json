@@ -9,12 +9,14 @@
     "career": "Desarrollador web full-stack"
   },
   "aboutMe": {
+    "title": "Sobre mi",
     "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
     "secondText": "Soy <div class='inline-block text-green-600'>desarrollador web</div> desde 2018.",
     "thirdText": "Tengo más de dos años de experiencia laboral trabajando con <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> y <div class='inline-block text-green-600'>TypeScript</div>.",
     "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'> bases de datos relacionales</div> y <div class='inline-block text-green-600'>C#</div>."
   },
   "myProjects": {
+    "title": "Mis proyectos",
     "xRayExplorerVR": {
       "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano."
     },

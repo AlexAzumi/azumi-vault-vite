@@ -9,10 +9,12 @@ const MyProjects: FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div
-      id='my-projects'
-      className='container mx-auto flex min-h-screen flex-col justify-center py-8'
-    >
+    <div className='container mx-auto flex min-h-screen flex-col justify-center py-8'>
+      <div id='my-projects' className='-translate-y-30' />
+
+      <h1 className='text-shadow-xl mb-10 text-center text-5xl font-semibold text-green-500 uppercase'>
+        {t('myProjects.title')}
+      </h1>
       {PROJECTS.map((item, idx) => (
         <div
           key={`project-${idx}`}
