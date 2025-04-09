@@ -16,6 +16,10 @@
   --default-font-family: Inconsolata, 'sans-serif';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-gray-900);
 }

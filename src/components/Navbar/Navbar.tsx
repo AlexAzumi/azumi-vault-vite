@@ -110,7 +110,7 @@ const Navbar: FC = () => {
           </div>
           {/* Collapse items */}
           <div
-            className={`flex h-full flex-col overflow-y-hidden transition-all ${collapsed ? 'max-h-0' : 'max-h-full'}`}
+            className={`flex h-full flex-col overflow-y-hidden ${collapsed ? 'max-h-0' : 'max-h-full'}`}
           >
             {NAVBAR_ITEMS.map((data, idx) => (
               <NavbarItem
