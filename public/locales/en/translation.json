@@ -9,9 +9,26 @@
     "career": "Full-stack web developer"
   },
   "aboutMe": {
-    "firstText": "Hello, my name is <div class='inline-block text-green-400'>Alejandro Suárez</div>.",
-    "secondText": "I've been a <div class='inline-block text-green-400'>web developer</div> since 2018.",
-    "thirdText": "I have more than two years of work experience using <div class='inline-block text-green-500'>React</div>, <div class='inline-block text-green-500'>Tailwind</div>, <div class='inline-block text-green-500'>Node.js</div> and <div class='inline-block text-green-500'>TypeScript</div>.",
-    "fourthText": "I also have experience using tools like <div class='inline-block text-green-500'>Unity Engine</div>, <div class='inline-block text-green-500'>React Native</div>, <div class='inline-block text-green-500'>Git</div>, <div class='inline-block text-green-500'>relational databases</div> and <div class='inline-block text-green-500'>C#</div>."
+    "firstText": "Hello, my name is <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
+    "secondText": "I've been a <div class='inline-block text-green-600'>web developer</div> since 2018.",
+    "thirdText": "I have more than two years of work experience using <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> and <div class='inline-block text-green-600'>TypeScript</div>.",
+    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>relational databases</div> and <div class='inline-block text-green-600'>C#</div>."
+  },
+  "myProjects": {
+    "xRayExplorerVR": {
+      "description": "VR application focused in learning about the human skeleton."
+    },
+    "enLosOjosDeTlachy": {
+      "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a <i>tlacuache</i> that searches ways to avoid the challenges that their reality presents.<br><br>This game was submitted to a game jam organized by Latin America Games Showcase."
+    },
+    "webpConverter": {
+      "description": "Desktop tool that allows the user to convert images to .webp and other formats such as .jpg, .png and .bmp."
+    },
+    "proyectosYRefrigeracion": {
+      "description": "Official webpage for Refrigeración y Proyectos S.A. de C.V."
+    },
+    "medalOfDarkness": {
+      "description": "Puzzle videogame for teenagers in order to help and improve the reading comprehension and logic reasoning."
+    }
   }
 }

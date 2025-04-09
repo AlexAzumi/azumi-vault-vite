@@ -1,0 +1,32 @@
+[
+  {
+    "name": "X-Ray Explorer VR",
+    "cover": "/img/x-ray-explorer-vr.webp",
+    "descriptionKey": "myProjects.xRayExplorerVR.description",
+    "url": "https://github.com/X-Ray-Explorer-VR/x-ray-explorer-vr"
+  },
+  {
+    "name": "En los ojos de Tlachy",
+    "cover": "/img/en-los-ojos-de-tlachy.webp",
+    "descriptionKey": "myProjects.enLosOjosDeTlachy.description",
+    "url": "https://abrah-uwu.itch.io/en-los-ojos-de-tlachy"
+  },
+  {
+    "name": "WebP Converter",
+    "cover": "/img/webp-converter.webp",
+    "descriptionKey": "myProjects.webpConverter.description",
+    "url": "https://github.com/AlexAzumi/webp-converter"
+  },
+  {
+    "name": "RYPSA",
+    "cover": "/img/rypsa.webp",
+    "descriptionKey": "myProjects.proyectosYRefrigeracion.description",
+    "url": "https://refrigeracionyproyectos.com/"
+  },
+  {
+    "name": "Medal of Darkness",
+    "cover": "/img/medal-of-darkness.webp",
+    "descriptionKey": "myProjects.medalOfDarkness.description",
+    "url": ""
+  }
+]

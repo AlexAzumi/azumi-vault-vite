@@ -12,6 +12,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: Inconsolata;
+  src: url('../src/assets/fonts/Inconsolata-ExtraBold.ttf');
+  font-weight: 800;
+}
+
 @theme {
   --default-font-family: Inconsolata, 'sans-serif';
 }

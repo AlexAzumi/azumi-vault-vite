@@ -9,9 +9,26 @@
     "career": "Desarrollador web full-stack"
   },
   "aboutMe": {
-    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-400'>Alejandro Suárez</div>.",
-    "secondText": "Soy <div class='inline-block text-green-400'>desarrollador web</div> desde 2018.",
-    "thirdText": "Tengo más de dos años de experiencia laboral trabajando con <div class='inline-block text-green-500'>React</div>, <div class='inline-block text-green-500'>Tailwind</div>, <div class='inline-block text-green-500'>Node.js</div> y <div class='inline-block text-green-500'>TypeScript</div>.",
-    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-500'>Unity Engine</div>, <div class='inline-block text-green-500'>React Native</div>, <div class='inline-block text-green-500'>Git</div>, <div class='inline-block text-green-500'> bases de datos relacionales</div> y <div class='inline-block text-green-500'>C#</div>."
+    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
+    "secondText": "Soy <div class='inline-block text-green-600'>desarrollador web</div> desde 2018.",
+    "thirdText": "Tengo más de dos años de experiencia laboral trabajando con <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> y <div class='inline-block text-green-600'>TypeScript</div>.",
+    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'> bases de datos relacionales</div> y <div class='inline-block text-green-600'>C#</div>."
+  },
+  "myProjects": {
+    "xRayExplorerVR": {
+      "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano."
+    },
+    "enLosOjosDeTlachy": {
+      "description": "Videojuego de puzzle y aventura ambientado en un escenario isométrico 2.5D, donde juegas como un pequeño tlacuache que busca forma de evitar los retos que representa su realidad. <br><br>Este juego fue enviado como participación del <i>game jam</i> organizado por Latin America Games Showcase."
+    },
+    "webpConverter": {
+      "description": "Herramienta de escritorio que te permite al usuario convertir imágenes a .webp u otros formatos como .jpg, .png y .bmp."
+    },
+    "proyectosYRefrigeracion": {
+      "description": "Página web oficial de Refrigeración y Proyectos S.A. de C.V."
+    },
+    "medalOfDarkness": {
+      "description": "Juego de puzles para adolescentes como apoyo y mejora de la compresión lectora y razonamiento lógico."
+    }
   }
 }
