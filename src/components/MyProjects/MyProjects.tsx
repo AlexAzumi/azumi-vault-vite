@@ -24,7 +24,7 @@ const MyProjects: FC = () => {
             <img src={item.cover} className='aspect-video rounded shadow-2xl' />
           </div>
           <div className='z-10 flex flex-col py-6 lg:-translate-x-3 lg:items-start lg:group-even:order-1 lg:group-even:translate-x-3 lg:group-even:items-end'>
-            <div className='mb-4 rounded bg-black p-4 group-even:text-right'>
+            <div className='mb-4 rounded bg-black p-4 lg:group-even:text-right'>
               <h2 className='mb-4 text-3xl font-extrabold text-green-600 shadow-2xl'>
                 {item.name}
               </h2>
