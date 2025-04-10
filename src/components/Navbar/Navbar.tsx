@@ -95,7 +95,9 @@ const Navbar: FC = () => {
           ))}
         </div>
         {/* Mobile navbar */}
-        <div className='mx-4 mt-3 flex flex-col rounded bg-black px-8 py-4 shadow-xl lg:hidden'>
+        <div
+          className={`mx-4 mt-3 flex flex-col rounded px-8 py-4 lg:hidden ${scrolled || !collapsed ? 'bg-black/80 shadow-xl backdrop-blur-lg' : ''}`}
+        >
           <div className='flex'>
             {/* i18n configuration */}
             <div className='mr-auto flex items-center text-white'>
