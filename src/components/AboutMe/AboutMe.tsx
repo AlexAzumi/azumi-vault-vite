@@ -9,15 +9,15 @@ const AboutMe: FC = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='container mx-auto flex min-h-screen flex-col px-2 py-8 lg:px-0'>
+    <div className='container mx-auto my-8 flex min-h-screen flex-col lg:px-0'>
       <div id='about-me' className='-translate-y-26' />
 
-      <h1 className='text-shadow-xl relative mb-10 flex justify-center text-center text-5xl font-semibold text-green-500 uppercase'>
-        <div className='z-10 flex items-center justify-center bg-gray-900 px-10'>
-          <FontAwesomeIcon icon={faIdCardClip} className='mr-4' />{' '}
+      <h1 className='text-shadow-xl relative mb-10 flex justify-center text-center text-2xl font-extrabold text-gray-900 uppercase md:text-3xl lg:text-4xl'>
+        <div className='z-10 flex items-center justify-center rounded bg-green-600 px-10 py-4'>
+          <FontAwesomeIcon icon={faIdCardClip} className='mr-4' />
           {t('aboutMe.title')}
         </div>
-        <hr className='absolute top-1/2 w-full border-green-700' />
+        <hr className='absolute top-1/2 w-full rounded border-2 border-green-600' />
       </h1>
 
       <div className='grid grid-cols-6 gap-4 px-4 md:px-2 xl:px-0'>
