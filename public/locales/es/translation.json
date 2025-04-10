@@ -36,5 +36,8 @@
   "contact": {
     "title": "Contacto",
     "sendEmail": "Enviar correo"
+  },
+  "footer": {
+    "compiledBy": "Compilado y publicado con <a href='https://netlify.com' target='_blank' class='text-green-600 hover:underline'>Netlify</a>"
   }
 }
