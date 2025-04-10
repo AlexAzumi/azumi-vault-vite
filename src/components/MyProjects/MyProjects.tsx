@@ -37,7 +37,7 @@ const MyProjects: FC = () => {
                 {item.name}
               </h2>
               <p
-                className='text-white'
+                className='text-base/tight text-white'
                 dangerouslySetInnerHTML={{ __html: t(item.descriptionKey) }}
               />
             </div>
