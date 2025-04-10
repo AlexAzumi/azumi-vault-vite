@@ -35,7 +35,10 @@ const Contact: FC = () => {
           <a
             className='flex items-center justify-center rounded bg-green-600 p-4 transition-all hover:-translate-y-1 hover:bg-green-500'
             href={`mailto:${CONTACT_DATA.email}`}
-            onClick={(event) => event.preventDefault()}
+            onClick={(event) => {
+              window.location.href = `mailto:${CONTACT_DATA.email}`
+              event.preventDefault()
+            }}
             target='_blank'
           >
             {t('contact.sendEmail')}
