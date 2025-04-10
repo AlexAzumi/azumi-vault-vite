@@ -32,5 +32,9 @@
     "medalOfDarkness": {
       "description": "Puzzle videogame for teenagers in order to help and improve the reading comprehension and logic reasoning."
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "sendEmail": "Send email"
   }
 }

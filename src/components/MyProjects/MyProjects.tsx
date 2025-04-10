@@ -1,4 +1,7 @@
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowUpRightFromSquare,
+  faDiagramProject,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -10,11 +13,16 @@ const MyProjects: FC = () => {
 
   return (
     <div className='container mx-auto flex min-h-screen flex-col justify-center py-8'>
-      <div id='my-projects' className='-translate-y-30' />
+      <div id='my-projects' className='-translate-y-26' />
 
-      <h1 className='text-shadow-xl mb-10 text-center text-5xl font-semibold text-green-500 uppercase'>
-        {t('myProjects.title')}
+      <h1 className='text-shadow-xl relative mb-10 flex justify-center text-center text-5xl font-semibold text-green-500 uppercase'>
+        <div className='z-10 flex items-center justify-center bg-gray-900 px-10'>
+          <FontAwesomeIcon icon={faDiagramProject} className='mr-4' />{' '}
+          {t('myProjects.title')}
+        </div>
+        <hr className='absolute top-1/2 w-full border-green-700' />
       </h1>
+
       {PROJECTS.map((item, idx) => (
         <div
           key={`project-${idx}`}

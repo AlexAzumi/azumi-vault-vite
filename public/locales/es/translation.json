@@ -32,5 +32,9 @@
     "medalOfDarkness": {
       "description": "Juego de puzles para adolescentes como apoyo y mejora de la compresión lectora y razonamiento lógico."
     }
+  },
+  "contact": {
+    "title": "Contacto",
+    "sendEmail": "Enviar correo"
   }
 }
