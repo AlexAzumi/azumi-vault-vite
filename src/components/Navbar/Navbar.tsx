@@ -7,8 +7,10 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC, useCallback, useMemo, useState } from 'react'
+import { FC, useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
+import useScrollPosition from '../../hooks/useScrollPosition'
 
 interface Item {
   title: string
@@ -18,6 +20,8 @@ interface Item {
 
 const Navbar: FC = () => {
   const [collapsed, setCollapsed] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
+  const scrollPosition = useScrollPosition()
 
   const { t, i18n } = useTranslation()
 
@@ -55,11 +59,21 @@ const Navbar: FC = () => {
     setCollapsed((value) => !value)
   }, [collapsed])
 
+  useEffect(() => {
+    if (scrollPosition >= 100 && !scrolled) {
+      setScrolled(true)
+    } else if (scrollPosition < 100 && scrolled) {
+      setScrolled(false)
+    }
+  }, [scrollPosition])
+
   return useMemo(
     () => (
       <div className='fixed top-0 right-0 left-0 z-20'>
         {/* Desktop navbar */}
-        <div className='container mx-auto mt-3 hidden rounded bg-black px-8 shadow-xl lg:flex'>
+        <div
+          className={`container mx-auto my-3 hidden rounded px-8 transition-colors lg:flex ${scrolled ? 'bg-black/80 shadow-xl backdrop-blur-lg' : ''}`}
+        >
           {/* i18n configuration */}
           <div className='mr-auto flex items-center text-white'>
             <div
@@ -129,7 +143,7 @@ const Navbar: FC = () => {
         )}
       </div>
     ),
-    [NAVBAR_ITEMS, i18n.language, collapsed],
+    [NAVBAR_ITEMS, i18n.language, collapsed, scrolled],
   )
 }
 
