@@ -19,6 +19,7 @@
   },
   "myProjects": {
     "title": "My projects",
+    "hoverForPreview": "Hover to see a preview",
     "xRayExplorerVR": {
       "description": "VR application focused in learning about the human skeleton."
     },

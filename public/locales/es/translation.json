@@ -19,6 +19,7 @@
   },
   "myProjects": {
     "title": "Mis proyectos",
+    "hoverForPreview": "Pase el cursor para ver vista previa",
     "xRayExplorerVR": {
       "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano."
     },

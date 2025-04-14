@@ -3,30 +3,35 @@
     "name": "X-Ray Explorer VR",
     "cover": "/img/x-ray-explorer-vr.webp",
     "descriptionKey": "myProjects.xRayExplorerVR.description",
-    "url": "https://github.com/X-Ray-Explorer-VR/x-ray-explorer-vr"
+    "url": "https://github.com/X-Ray-Explorer-VR/x-ray-explorer-vr",
+    "videoUrl": "/videos/x-ray-explorer-vr.mp4"
   },
   {
     "name": "En los ojos de Tlachy",
     "cover": "/img/en-los-ojos-de-tlachy.webp",
     "descriptionKey": "myProjects.enLosOjosDeTlachy.description",
-    "url": "https://abrah-uwu.itch.io/en-los-ojos-de-tlachy"
+    "url": "https://abrah-uwu.itch.io/en-los-ojos-de-tlachy",
+    "videoUrl": ""
   },
   {
     "name": "RYPSA",
     "cover": "/img/rypsa.webp",
     "descriptionKey": "myProjects.proyectosYRefrigeracion.description",
-    "url": "https://refrigeracionyproyectos.com/"
+    "url": "https://refrigeracionyproyectos.com/",
+    "videoUrl": ""
   },
   {
     "name": "WebP Converter",
     "cover": "/img/webp-converter.webp",
     "descriptionKey": "myProjects.webpConverter.description",
-    "url": "https://github.com/AlexAzumi/webp-converter"
+    "url": "https://github.com/AlexAzumi/webp-converter",
+    "videoUrl": ""
   },
   {
     "name": "Medal of Darkness",
     "cover": "/img/medal-of-darkness.webp",
     "descriptionKey": "myProjects.medalOfDarkness.description",
-    "url": ""
+    "url": "",
+    "videoUrl": ""
   }
 ]
