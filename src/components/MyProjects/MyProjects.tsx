@@ -79,20 +79,23 @@ const ProjectItem: FC<ProjectItemProps> = ({
           src={cover}
           className={`aspect-video rounded opacity-100 transition-opacity ${!videoPaused && 'opacity-0!'}`}
         />
-        <div
-          className={`absolute right-0 bottom-0 left-0 bg-black/30 p-3 text-white transition-opacity ${!videoPaused && 'opacity-0!'}`}
-        >
-          {t('myProjects.hoverForPreview')}
-        </div>
+
         {videoUrl && (
-          <video
-            ref={videoRef}
-            className='absolute top-0 -z-10 rounded'
-            muted={true}
-            loop={true}
-          >
-            <source src={videoUrl} type='video/mp4' />
-          </video>
+          <>
+            <video
+              ref={videoRef}
+              className='absolute top-0 -z-10 rounded'
+              muted={true}
+              loop={true}
+            >
+              <source src={videoUrl} type='video/mp4' />
+            </video>
+            <div
+              className={`absolute right-0 bottom-0 left-0 bg-black/30 p-3 text-white transition-opacity ${!videoPaused && 'opacity-0!'}`}
+            >
+              {t('myProjects.hoverForPreview')}
+            </div>
+          </>
         )}
       </div>
       <div className='z-10 flex flex-col py-6 lg:-translate-x-3 lg:items-start lg:group-even:order-1 lg:group-even:translate-x-3 lg:group-even:items-end'>
