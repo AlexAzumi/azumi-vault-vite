@@ -39,7 +39,7 @@ const Home: FC = () => {
       </div>
       {/* On top data */}
       <div className='absolute top-20 right-0 bottom-20 left-0 flex'>
-        <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6 lg:px-0'>
+        <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6'>
           <h1 className='mb-2 text-7xl font-semibold text-green-600 text-shadow-lg'>
             Alejandro Suárez
           </h1>
@@ -70,13 +70,13 @@ const Home: FC = () => {
             </a>
           </div>
           {/* More information */}
-          <div className='flex translate-y-20 text-lg text-white'>
+          <div className='flex translate-y-20 self-center text-lg text-white md:self-auto'>
             <div
               className='animate-bounce hover:cursor-pointer'
               onClick={() => scrollToElement('about-me')}
             >
               <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
-              Desplaza para conocer más
+              {t('home.scrollForMore')}
               <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
             </div>
           </div>

@@ -6,7 +6,8 @@
     "contact": "Contact"
   },
   "home": {
-    "career": "Full-stack web developer"
+    "career": "Full-stack web developer",
+    "scrollForMore": "Scroll to know more"
   },
   "aboutMe": {
     "title": "About me",
