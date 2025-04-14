@@ -1,4 +1,4 @@
-import { faIdCardClip } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faIdCardClip } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -44,6 +44,17 @@ const AboutMe: FC = () => {
             dangerouslySetInnerHTML={{ __html: t('aboutMe.fourthText') }}
           />
         </div>
+      </div>
+
+      <div className='mt-12 mb-8 flex justify-center'>
+        <a
+          className='flex animate-bounce items-center justify-center p-4 text-white'
+          href='#my-projects'
+        >
+          <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
+          Descubrir mis proyectos
+          <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
+        </a>
       </div>
     </div>
   )
