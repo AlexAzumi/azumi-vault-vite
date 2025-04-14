@@ -15,7 +15,7 @@ import useScrollPosition from '../../hooks/useScrollPosition'
 interface Item {
   title: string
   icon: IconDefinition
-  href: string
+  id: string
 }
 
 const Navbar: FC = () => {
@@ -28,24 +28,24 @@ const Navbar: FC = () => {
   const NAVBAR_ITEMS = useMemo(
     () => [
       {
+        id: 'home',
         title: t('navbar.home'),
         icon: faHome,
-        href: '#home',
       },
       {
+        id: 'about-me',
         title: t('navbar.aboutMe'),
         icon: faIdCardClip,
-        href: '#about-me',
       },
       {
+        id: 'my-projects',
         title: t('navbar.myProjects'),
         icon: faDiagramProject,
-        href: '#my-projects',
       },
       {
+        id: 'contact',
         title: t('navbar.contact'),
         icon: faEnvelope,
-        href: '#contact',
       },
     ],
     [t],
@@ -58,6 +58,17 @@ const Navbar: FC = () => {
   const toggleCollapse = useCallback(() => {
     setCollapsed((value) => !value)
   }, [collapsed])
+
+  const scrollToElement = useCallback(
+    (id: string) => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+
+      if (!collapsed) {
+        toggleCollapse()
+      }
+    },
+    [collapsed],
+  )
 
   useEffect(() => {
     if (scrollPosition >= 100 && !scrolled) {
@@ -91,7 +102,11 @@ const Navbar: FC = () => {
             </div>
           </div>
           {NAVBAR_ITEMS.map((data, idx) => (
-            <NavbarItem key={`navbar-item-${idx}`} {...data} />
+            <NavbarItem
+              {...data}
+              key={`navbar-item-${idx}`}
+              onClick={() => scrollToElement(data.id)}
+            />
           ))}
         </div>
         {/* Mobile navbar */}
@@ -130,9 +145,9 @@ const Navbar: FC = () => {
           >
             {NAVBAR_ITEMS.map((data, idx) => (
               <NavbarItem
-                key={`navbar-item-${idx}`}
                 {...data}
-                onClick={toggleCollapse}
+                key={`navbar-item-${idx}`}
+                onClick={() => scrollToElement(data.id)}
               />
             ))}
           </div>
@@ -153,17 +168,16 @@ interface NavbarItemProps extends Item {
   onClick?(): void
 }
 
-const NavbarItem: FC<NavbarItemProps> = ({ title, icon, href, onClick }) => {
+const NavbarItem: FC<NavbarItemProps> = ({ title, icon, onClick }) => {
   return (
-    <a
+    <div
       className='group relative py-4 text-center text-lg font-semibold text-white uppercase transition-colors last-of-type:mr-0 last-of-type:pb-0 hover:cursor-pointer hover:text-green-500 lg:mr-8 lg:text-left'
-      href={href}
       onClick={onClick}
     >
       <FontAwesomeIcon icon={icon} className='mr-2' />
       {title}
       <hr className='absolute right-0 bottom-0 left-0 w-0 border-green-500 transition-all group-hover:w-full group-hover:border-b' />
-    </a>
+    </div>
   )
 }
 

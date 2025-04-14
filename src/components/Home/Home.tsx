@@ -3,14 +3,19 @@ import {
   faItchIo,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber'
-import { FC, useRef } from 'react'
+import { FC, useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
 const Home: FC = () => {
   const { t } = useTranslation()
+
+  const scrollToElement = useCallback((id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
 
   return (
     <div id='home' className='relative flex h-screen w-screen max-w-full'>
@@ -34,7 +39,7 @@ const Home: FC = () => {
       </div>
       {/* On top data */}
       <div className='absolute top-20 right-0 bottom-20 left-0 flex'>
-        <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6 lg:px-0'>
+        <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6'>
           <h1 className='mb-2 text-7xl font-semibold text-green-600 text-shadow-lg'>
             Alejandro Suárez
           </h1>
@@ -64,6 +69,17 @@ const Home: FC = () => {
               <FontAwesomeIcon icon={faItchIo} />
             </a>
           </div>
+          {/* More information */}
+          <div className='flex translate-y-20 self-center text-lg text-white md:self-auto'>
+            <div
+              className='animate-bounce hover:cursor-pointer'
+              onClick={() => scrollToElement('about-me')}
+            >
+              <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
+              {t('home.scrollForMore')}
+              <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -76,7 +92,7 @@ const Box = (props: ThreeElements['mesh']) => {
   const { width } = useThree((state) => state.viewport)
 
   useFrame((_, delta) => {
-    meshRef.current.rotateY(delta * 0.2)
+    meshRef.current.rotateY(delta * 0.1)
   })
 
   return (

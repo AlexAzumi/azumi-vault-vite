@@ -1,12 +1,16 @@
 import { faArrowDown, faIdCardClip } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC } from 'react'
+import { FC, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import profileImg from '../../assets/img/profile.jpg'
 
 const AboutMe: FC = () => {
   const { t } = useTranslation()
+
+  const scrollToElement = useCallback((id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
 
   return (
     <div className='container mx-auto my-8 flex min-h-screen flex-col lg:px-0'>
@@ -47,14 +51,14 @@ const AboutMe: FC = () => {
       </div>
 
       <div className='mt-12 mb-8 flex justify-center'>
-        <a
-          className='flex animate-bounce items-center justify-center p-4 text-white'
-          href='#my-projects'
+        <div
+          className='flex animate-bounce items-center justify-center p-4 text-white hover:cursor-pointer'
+          onClick={() => scrollToElement('my-projects')}
         >
           <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
           {t('aboutMe.checkProjects')}
           <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
-        </a>
+        </div>
       </div>
     </div>
   )
