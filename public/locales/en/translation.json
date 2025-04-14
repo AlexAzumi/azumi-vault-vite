@@ -13,7 +13,8 @@
     "firstText": "Hello, my name is <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
     "secondText": "I've been a <div class='inline-block text-green-600'>web developer</div> since 2018.",
     "thirdText": "I have more than two years of work experience using <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> and <div class='inline-block text-green-600'>TypeScript</div>.",
-    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>relational databases</div> and <div class='inline-block text-green-600'>C#</div>."
+    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>relational databases</div> and <div class='inline-block text-green-600'>C#</div>.",
+    "checkProjects": "Check my projects!"
   },
   "myProjects": {
     "title": "My projects",
