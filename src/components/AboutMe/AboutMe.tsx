@@ -52,7 +52,7 @@ const AboutMe: FC = () => {
           href='#my-projects'
         >
           <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
-          Descubrir mis proyectos
+          {t('aboutMe.checkProjects')}
           <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
         </a>
       </div>
