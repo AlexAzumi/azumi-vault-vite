@@ -3,14 +3,19 @@ import {
   faItchIo,
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber'
-import { FC, useRef } from 'react'
+import { FC, useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
 const Home: FC = () => {
   const { t } = useTranslation()
+
+  const scrollToElement = useCallback((id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
 
   return (
     <div id='home' className='relative flex h-screen w-screen max-w-full'>
@@ -64,6 +69,17 @@ const Home: FC = () => {
               <FontAwesomeIcon icon={faItchIo} />
             </a>
           </div>
+          {/* More information */}
+          <div className='flex translate-y-20 text-lg text-white'>
+            <div
+              className='animate-bounce hover:cursor-pointer'
+              onClick={() => scrollToElement('about-me')}
+            >
+              <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
+              Desplaza para conocer más
+              <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -76,7 +92,7 @@ const Box = (props: ThreeElements['mesh']) => {
   const { width } = useThree((state) => state.viewport)
 
   useFrame((_, delta) => {
-    meshRef.current.rotateY(delta * 0.2)
+    meshRef.current.rotateY(delta * 0.1)
   })
 
   return (
