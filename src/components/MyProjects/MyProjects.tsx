@@ -42,8 +42,8 @@ const MyProjects: FC = () => {
               />
             </div>
             {item.url && (
-              <div className='bg-back rounded bg-black p-4 text-center text-green-600'>
-                <a href={item.url} target='_blank' className='group/link'>
+              <div className='bg-back group/link rounded bg-black text-center text-green-600'>
+                <a href={item.url} target='_blank' className='block p-4'>
                   {item.url} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   <hr className='w-0 transition-all group-hover/link:w-full' />
                 </a>
