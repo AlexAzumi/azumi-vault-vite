@@ -136,15 +136,19 @@ const Navbar: FC = () => {
           </div>
           {/* Collapse items */}
           <div
-            className={`flex h-full flex-col overflow-y-hidden ${collapsed ? 'max-h-0' : 'max-h-full'}`}
+            className={`flex h-full flex-col ${collapsed ? 'max-h-0' : 'max-h-full'}`}
           >
-            {NAVBAR_ITEMS.map((data, idx) => (
-              <NavbarItem
-                {...data}
-                key={`navbar-item-${idx}`}
-                onClick={() => scrollToElement(data.id)}
-              />
-            ))}
+            <div
+              className={`overflow-y-hidden transition ${collapsed ? '-translate-y-2 opacity-0' : 'translate-y-0 opacity-100'}`}
+            >
+              {NAVBAR_ITEMS.map((data, idx) => (
+                <NavbarItem
+                  {...data}
+                  key={`navbar-item-${idx}`}
+                  onClick={() => scrollToElement(data.id)}
+                />
+              ))}
+            </div>
           </div>
         </div>
         {!collapsed && (
