@@ -78,7 +78,7 @@ const Navbar: FC = () => {
       <div className='fixed top-0 right-0 left-0 z-20'>
         {/* Desktop navbar */}
         <div
-          className={`container mx-auto my-3 hidden rounded px-8 transition-colors lg:flex ${scrolled ? 'bg-black/70 shadow-xl backdrop-blur-lg' : ''}`}
+          className={`container mx-auto my-3 hidden rounded px-8 transition-colors lg:flex ${scrolled && 'bg-black/70 shadow-xl backdrop-blur-lg'}`}
         >
           {/* i18n configuration */}
           <div className='mr-auto flex items-center text-white'>
@@ -106,7 +106,7 @@ const Navbar: FC = () => {
         </div>
         {/* Mobile navbar */}
         <div
-          className={`mx-4 mt-3 flex flex-col rounded px-8 py-4 lg:hidden ${scrolled || !collapsed ? 'bg-black/70 shadow-xl backdrop-blur-lg' : ''}`}
+          className={`mx-4 mt-3 flex flex-col rounded px-8 py-4 lg:hidden ${(scrolled || !collapsed) && 'bg-black/70 shadow-xl backdrop-blur-lg'}`}
         >
           <div className='flex'>
             {/* i18n configuration */}
