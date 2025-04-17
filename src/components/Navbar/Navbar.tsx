@@ -4,19 +4,14 @@ import {
   faEnvelope,
   faHome,
   faIdCardClip,
-  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC, useCallback, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import useScrollPosition from '../../hooks/useScrollPosition'
+import { NavbarItem } from '../NavbarItem'
 
-interface Item {
-  title: string
-  icon: IconDefinition
-  id: string
-}
+import useScrollPosition from '../../hooks/useScrollPosition'
 
 const Navbar: FC = () => {
   const [collapsed, setCollapsed] = useState(true)
@@ -83,7 +78,7 @@ const Navbar: FC = () => {
       <div className='fixed top-0 right-0 left-0 z-20'>
         {/* Desktop navbar */}
         <div
-          className={`container mx-auto my-3 hidden rounded px-8 transition-colors lg:flex ${scrolled ? 'bg-black/70 shadow-xl backdrop-blur-lg' : ''}`}
+          className={`container mx-auto my-3 hidden rounded px-8 transition-colors lg:flex ${scrolled && 'bg-black/70 shadow-xl backdrop-blur-lg'}`}
         >
           {/* i18n configuration */}
           <div className='mr-auto flex items-center text-white'>
@@ -111,7 +106,7 @@ const Navbar: FC = () => {
         </div>
         {/* Mobile navbar */}
         <div
-          className={`mx-4 mt-3 flex flex-col rounded px-8 py-4 lg:hidden ${scrolled || !collapsed ? 'bg-black/70 shadow-xl backdrop-blur-lg' : ''}`}
+          className={`mx-4 mt-3 flex flex-col rounded px-8 py-4 lg:hidden ${(scrolled || !collapsed) && 'bg-black/70 shadow-xl backdrop-blur-lg'}`}
         >
           <div className='flex'>
             {/* i18n configuration */}
@@ -141,15 +136,19 @@ const Navbar: FC = () => {
           </div>
           {/* Collapse items */}
           <div
-            className={`flex h-full flex-col overflow-y-hidden ${collapsed ? 'max-h-0' : 'max-h-full'}`}
+            className={`flex h-full flex-col ${collapsed ? 'max-h-0' : 'max-h-full'}`}
           >
-            {NAVBAR_ITEMS.map((data, idx) => (
-              <NavbarItem
-                {...data}
-                key={`navbar-item-${idx}`}
-                onClick={() => scrollToElement(data.id)}
-              />
-            ))}
+            <div
+              className={`overflow-y-hidden transition ${collapsed ? '-translate-y-2 opacity-0' : 'translate-y-0 opacity-100'}`}
+            >
+              {NAVBAR_ITEMS.map((data, idx) => (
+                <NavbarItem
+                  {...data}
+                  key={`navbar-item-${idx}`}
+                  onClick={() => scrollToElement(data.id)}
+                />
+              ))}
+            </div>
           </div>
         </div>
         {!collapsed && (
@@ -161,23 +160,6 @@ const Navbar: FC = () => {
       </div>
     ),
     [NAVBAR_ITEMS, i18n.language, collapsed, scrolled],
-  )
-}
-
-interface NavbarItemProps extends Item {
-  onClick?(): void
-}
-
-const NavbarItem: FC<NavbarItemProps> = ({ title, icon, onClick }) => {
-  return (
-    <div
-      className='group relative py-4 text-center text-lg font-semibold text-white uppercase transition-colors last-of-type:mr-0 last-of-type:pb-0 hover:cursor-pointer hover:text-green-500 lg:mr-8 lg:text-left'
-      onClick={onClick}
-    >
-      <FontAwesomeIcon icon={icon} className='mr-2' />
-      {title}
-      <hr className='absolute right-0 bottom-0 left-0 w-0 border-green-500 transition-all group-hover:w-full group-hover:border-b' />
-    </div>
   )
 }
 
