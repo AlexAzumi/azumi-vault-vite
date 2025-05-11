@@ -28,8 +28,8 @@ const Home: FC = () => {
         >
           <ambientLight intensity={Math.PI / 2} />
           <spotLight
-            position={[5, 5, 5]}
-            angle={0.25}
+            position={[1, 2, 10]}
+            angle={0.3}
             penumbra={1}
             decay={0}
             intensity={Math.PI * 4}
