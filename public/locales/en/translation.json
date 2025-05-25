@@ -6,15 +6,15 @@
     "contact": "Contact"
   },
   "home": {
-    "career": "Software developer",
+    "career": "Computer engineer and software developer",
     "scrollForMore": "Scroll for more"
   },
   "aboutMe": {
     "title": "About me",
-    "firstText": "Hello, my name is <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
-    "secondText": "I've been a <div class='inline-block text-green-600'>software developer</div> since 2018.",
-    "thirdText": "I have more than two years of work experience using <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> and <div class='inline-block text-green-600'>TypeScript</div>.",
-    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> and <div class='inline-block text-green-600'>C#</div>.",
+    "firstText": "Hello, my name is <div class='inline-block text-green-600'>Alejandro Suárez</div>",
+    "secondText": "I've been a <div class='inline-block text-green-600'>software developer</div> since 2018 and graduated from the <div class='inline-block text-green-600'>University of Guadalajara</div> with a degree in <div class='inline-block text-green-600'>Computer Engineering</div>",
+    "thirdText": "I have more than three years of work experience using <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> and <div class='inline-block text-green-600'>TypeScript</div>",
+    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> and <div class='inline-block text-green-600'>C#</div>",
     "checkProjects": "Check out my projects!"
   },
   "myProjects": {

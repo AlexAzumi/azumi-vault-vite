@@ -40,10 +40,10 @@ const Home: FC = () => {
       {/* On top data */}
       <div className='absolute top-20 right-0 bottom-20 left-0 flex'>
         <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6'>
-          <h1 className='mb-2 text-7xl font-semibold text-green-600 text-shadow-lg'>
+          <h1 className='mb-2 text-7xl font-semibold text-green-600 text-shadow-lg/50'>
             Alejandro Suárez
           </h1>
-          <h3 className='mb-6 text-xl text-white text-shadow-lg'>
+          <h3 className='mb-6 text-xl text-white text-shadow-lg/40'>
             {t('home.career')}
           </h3>
           <div className='text-3xl lg:text-2xl'>

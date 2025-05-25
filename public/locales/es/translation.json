@@ -6,15 +6,15 @@
     "contact": "Contacto"
   },
   "home": {
-    "career": "Desarrollador de software",
+    "career": "Ingeniero en computación y desarrollador de software",
     "scrollForMore": "Desplaza para conocer más"
   },
   "aboutMe": {
     "title": "Sobre mi",
-    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-600'>Alejandro Suárez</div>.",
-    "secondText": "Soy <div class='inline-block text-green-600'>desarrollador de software</div> desde 2018.",
-    "thirdText": "Tengo más de dos años de experiencia laboral trabajando con <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> y <div class='inline-block text-green-600'>TypeScript</div>.",
-    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> y <div class='inline-block text-green-600'>C#</div>.",
+    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-600'>Alejandro Suárez</div>",
+    "secondText": "Soy <div class='inline-block text-green-600'>desarrollador de software</div> desde 2018 y egresado de la <div class='inline-block text-green-600'>Universidad de Guadalajara</div> de la carrera de <div class='inline-block text-green-600'>Ingeniería en Computación</div>",
+    "thirdText": "Tengo más de tres años de experiencia laboral trabajando con <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> y <div class='inline-block text-green-600'>TypeScript</div>",
+    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> y <div class='inline-block text-green-600'>C#</div>",
     "checkProjects": "¡Dale una vista a mis proyectos!"
   },
   "myProjects": {
