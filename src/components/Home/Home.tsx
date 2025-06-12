@@ -34,7 +34,7 @@ const Home: FC = () => {
             decay={0}
             intensity={Math.PI * 4}
           />
-          <Box position={[0, 0, 0]} rotation={[0.1, 0, 0.1]} />
+          <SphereMesh position={[0, 0, 0]} rotation={[0.1, 0, 0.1]} />
         </Canvas>
       </div>
       {/* On top data */}
@@ -86,7 +86,7 @@ const Home: FC = () => {
   )
 }
 
-const Box = (props: ThreeElements['mesh']) => {
+const SphereMesh = (props: ThreeElements['mesh']) => {
   const meshRef = useRef<THREE.Mesh>(null!)
 
   const { width } = useThree((state) => state.viewport)
