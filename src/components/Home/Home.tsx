@@ -5,8 +5,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useGLTF } from '@react-three/drei'
 import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber'
-import { FC, useCallback, useRef } from 'react'
+import { Bloom, EffectComposer } from '@react-three/postprocessing'
+import { FC, Suspense, useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
 
@@ -25,16 +27,41 @@ const Home: FC = () => {
           camera={{
             fov: 60,
           }}
+          gl={{
+            antialias: true,
+            powerPreference: 'high-performance',
+            failIfMajorPerformanceCaveat: true,
+          }}
+          onCreated={({ gl }) => {
+            gl.domElement.addEventListener('webglcontextlost', (event) => {
+              event.preventDefault()
+              console.warn('WebGL context lost. Attempting to restore...')
+            })
+            gl.domElement.addEventListener('webglcontextrestored', () => {
+              console.log('WebGL context restored')
+            })
+          }}
         >
-          <ambientLight intensity={Math.PI / 2} />
-          <spotLight
-            position={[1, 2, 10]}
-            angle={0.3}
-            penumbra={1}
-            decay={0}
-            intensity={Math.PI * 4}
-          />
-          <SphereMesh position={[0, 0, 0]} rotation={[0.1, 0, 0.1]} />
+          <Suspense fallback={null}>
+            <ambientLight intensity={Math.PI / 2} />
+            <spotLight
+              position={[1, 2, 10]}
+              angle={0.5}
+              penumbra={1}
+              decay={0}
+              intensity={Math.PI * 0.7}
+            />
+            <ComputerMesh rotation={[0.1, 0, 0.1]} />
+          </Suspense>
+          <EffectComposer>
+            <Bloom
+              intensity={0.06}
+              blurPass={undefined}
+              kernelSize={3}
+              luminanceThreshold={0.5}
+              luminanceSmoothing={0.5}
+            />
+          </EffectComposer>
         </Canvas>
       </div>
       {/* On top data */}
@@ -86,19 +113,22 @@ const Home: FC = () => {
   )
 }
 
-const SphereMesh = (props: ThreeElements['mesh']) => {
+const ComputerMesh = (props: ThreeElements['mesh']) => {
+  const computer = useGLTF('/models/retro-computer.glb')
+
   const meshRef = useRef<THREE.Mesh>(null!)
 
   const { width } = useThree((state) => state.viewport)
 
   useFrame((_, delta) => {
-    meshRef.current.rotateY(delta * 0.1)
+    if (meshRef.current) {
+      meshRef.current.rotateY(delta * 0.5)
+    }
   })
 
   return (
-    <mesh {...props} ref={meshRef} position={[width / 4.5, 0, 0]}>
-      <sphereGeometry args={[1.8]} />
-      <meshStandardMaterial color='green' wireframe={true} />
+    <mesh {...props} ref={meshRef} position={[width / 4.5, -1, 0]}>
+      <primitive object={computer.scene} scale={4} />
     </mesh>
   )
 }

@@ -41,6 +41,6 @@
     "sendEmail": "Send email"
   },
   "footer": {
-    "compiledBy": "Compiled and published with <a href='https://netlify.com' target='_blank' class='text-green-600 hover:underline'>Netlify</a>"
+    "compiledBy": "Compiled and published with <a href='https://netlify.com' target='_blank'>Netlify</a>"
   }
 }
