@@ -85,8 +85,9 @@ const ProjectItem: FC<ProjectItemProps> = ({
             <video
               ref={videoRef}
               className='absolute top-0 -z-10 rounded'
-              muted={true}
               loop={true}
+              muted={true}
+              preload='auto'
             >
               <source src={videoUrl} type='video/mp4' />
             </video>
