@@ -126,7 +126,7 @@ const ComputerMesh = (props: ThreeElements['mesh']) => {
   })
 
   return (
-    <mesh {...props} ref={meshRef} position={[width / 4.5, -1, 0]}>
+    <mesh {...props} ref={meshRef} position={[width / 5, -1.3, 0]}>
       <primitive object={computer.scene} scale={4} />
     </mesh>
   )
