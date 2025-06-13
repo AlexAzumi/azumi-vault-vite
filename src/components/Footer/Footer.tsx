@@ -7,7 +7,7 @@ const Footer: FC = () => {
   const currentYear = useMemo(() => new Date().getFullYear(), [])
 
   return (
-    <div className='container mx-auto mt-8 mb-4 flex flex-col px-4 text-white shadow-2xl [&_a]:text-green-600'>
+    <div className='container mx-auto mt-8 mb-4 flex flex-col px-4 text-white shadow-2xl [&_a]:text-green-600 [&_a]:hover:underline'>
       <p
         className='rounded bg-black p-4 text-center'
         dangerouslySetInnerHTML={{
