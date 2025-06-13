@@ -43,19 +43,18 @@ const Home: FC = () => {
           }}
         >
           <Suspense fallback={null}>
-            <ambientLight intensity={Math.PI / 2} />
             <spotLight
               position={[1, 2, 10]}
               angle={0.5}
               penumbra={1}
               decay={0}
-              intensity={Math.PI * 0.7}
+              intensity={Math.PI * 0.5}
             />
             <ComputerMesh rotation={[0.1, 0, 0.1]} />
           </Suspense>
           <EffectComposer>
             <Bloom
-              intensity={0.06}
+              intensity={0.1}
               blurPass={undefined}
               kernelSize={3}
               luminanceThreshold={0.5}
@@ -99,7 +98,7 @@ const Home: FC = () => {
           {/* More information */}
           <div className='flex translate-y-20 self-center text-lg text-white md:self-auto'>
             <div
-              className='animate-bounce hover:cursor-pointer'
+              className='animate-bounce rounded bg-black/40 px-3 py-1 backdrop-blur-sm hover:cursor-pointer md:bg-transparent md:p-0'
               onClick={() => scrollToElement('about-me')}
             >
               <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
@@ -122,7 +121,7 @@ const ComputerMesh = (props: ThreeElements['mesh']) => {
 
   useFrame((_, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotateY(delta * 0.5)
+      meshRef.current.rotateY(delta * 0.4)
     }
   })
 
