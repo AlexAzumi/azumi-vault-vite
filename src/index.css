@@ -20,6 +20,17 @@
 
 @theme {
   --default-font-family: Inconsolata, 'sans-serif';
+
+  --animate-fade-in: fadeIn 2s ease-in 300ms forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 html {

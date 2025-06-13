@@ -22,7 +22,7 @@ const Home: FC = () => {
   return (
     <div id='home' className='relative flex h-screen w-screen max-w-full'>
       {/* Three.js canvas */}
-      <div className='container mx-auto'>
+      <div className='animate-fade-in container mx-auto opacity-0'>
         <Canvas
           camera={{
             fov: 60,
@@ -50,7 +50,7 @@ const Home: FC = () => {
               decay={0}
               intensity={Math.PI * 0.5}
             />
-            <ComputerMesh rotation={[0.1, 0, 0.1]} />
+            <ComputerMesh rotation={[0, 0, 0]} />
           </Suspense>
           <EffectComposer>
             <Bloom
@@ -121,7 +121,7 @@ const ComputerMesh = (props: ThreeElements['mesh']) => {
 
   useFrame((_, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotateY(delta * 0.4)
+      meshRef.current.rotateY(delta * -0.4)
     }
   })
 
