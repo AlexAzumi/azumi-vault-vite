@@ -27,7 +27,7 @@
       "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a <i>tlacuache</i> that searches ways to avoid the challenges that their reality presents.<br><br>This game was submitted to a game jam organized by Latin America Games Showcase."
     },
     "webpConverter": {
-      "description": "Desktop tool that allows the user to convert images to .webp and other formats such as .jpg, .png and .bmp."
+      "description": "Open source desktop multi-platform application that allows the user to convert images to .webp and other formats such as .jpg, .png and .bmp.<br><br>At the moment has {{stars}} stars in GitHub!"
     },
     "proyectosYRefrigeracion": {
       "description": "Official webpage for Refrigeración y Proyectos S.A. de C.V."

@@ -3,14 +3,26 @@ import {
   faDiagramProject,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { TFunction } from 'i18next'
+import { FC, useCallback, useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import PROJECTS from '../../data/projects.json'
 
 const MyProjects: FC = () => {
   const { t } = useTranslation()
+
+  const [stars, setStars] = useState(20)
+
+  useEffect(() => {
+    fetch('https://api.github.com/repos/AlexAzumi/webp-converter')
+      .then(async (response) => {
+        const body = await response.json()
+
+        setStars(body.stargazers_count)
+      })
+      .catch(console.warn)
+  }, [])
 
   return (
     <div className='container mx-auto my-8 flex min-h-screen flex-col justify-center'>
@@ -25,33 +37,36 @@ const MyProjects: FC = () => {
       </h1>
 
       {PROJECTS.map((item, idx) => (
-        <ProjectItem key={`project-${idx}`} t={t} {...item} />
+        <ProjectItem key={`project-${idx}`} t={t} stars={stars} {...item} />
       ))}
     </div>
   )
 }
 
 interface ProjectItemProps {
-  name: string
   cover: string
   descriptionKey: string
+  name: string
+  stars: number
+  t: TFunction<'translation', undefined>
   url: string
   videoUrl: string
-  t: TFunction<'translation', undefined>
 }
 
 const ProjectItem: FC<ProjectItemProps> = ({
-  name,
   cover,
   descriptionKey,
+  name,
+  stars,
+  t,
   url,
   videoUrl,
-  t,
 }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
+
   const [videoPaused, setVideoPaused] = useState(true)
 
-  const togglePlayback = (play?: boolean) => {
+  const togglePlayback = useCallback((play?: boolean) => {
     if (!videoRef.current) return
 
     if (videoRef.current.paused || play) {
@@ -61,7 +76,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
       videoRef.current.pause()
       setVideoPaused(true)
     }
-  }
+  }, [])
 
   return (
     <div className='group grid grid-cols-1 px-4 last-of-type:mb-0 lg:mb-6 lg:grid-cols-2'>
@@ -106,7 +121,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
           </h2>
           <p
             className='text-base/tight text-white'
-            dangerouslySetInnerHTML={{ __html: t(descriptionKey) }}
+            dangerouslySetInnerHTML={{ __html: t(descriptionKey, { stars }) }}
           />
         </div>
         {url && (
