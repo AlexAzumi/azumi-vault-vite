@@ -50,6 +50,7 @@ interface ProjectItemProps {
   name: string
   stars: number
   t: TFunction<'translation', undefined>
+  technologies: string[]
   url: string
   videoUrl: string
 }
@@ -60,6 +61,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
   name,
   stars,
   t,
+  technologies,
   url,
   videoUrl,
 }) => {
@@ -124,13 +126,25 @@ const ProjectItem: FC<ProjectItemProps> = ({
             <Trans
               i18nKey={descriptionKey}
               components={{
-                p: <p className='mt-2' />,
+                p: <div className='mt-2' />,
                 startIcon: <FontAwesomeIcon icon={faStar} />,
                 highlight: <div className='inline-block text-yellow-600' />,
               }}
               values={{ stars: stars }}
             />
           </div>
+          <p className='mt-4 text-lg font-bold text-white'>
+            {t('myProjects.technologiesUsed')}
+          </p>
+          <p className='list-inside list-disc text-white'>
+            {technologies.map((item, idx) => {
+              if (idx < technologies.length - 1) {
+                return `${item} | `
+              } else {
+                return item
+              }
+            })}
+          </p>
         </div>
         {url && (
           <div className='bg-back group/link rounded bg-black text-center text-green-600'>

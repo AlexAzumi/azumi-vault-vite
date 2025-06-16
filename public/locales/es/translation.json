@@ -20,14 +20,15 @@
   "myProjects": {
     "title": "Mis proyectos",
     "hoverForPreview": "Pase el cursor para ver vista previa",
+    "technologiesUsed": "Tecnologías usadas",
     "xRayExplorerVR": {
-      "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano."
+      "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano de manera interactiva y divertida."
     },
     "enLosOjosDeTlachy": {
       "description": "Videojuego de puzzle y aventura ambientado en un escenario isométrico 2.5D, donde juegas como un pequeño tlacuache que busca forma de evitar los retos que representa su realidad.<p>Este juego fue enviado como participación del game jam organizado por Latin America Games Showcase.</p>"
     },
     "webpConverter": {
-      "description": "Aplicación de código abierto, escritorio y multiplataforma que te permite al usuario convertir imágenes a .webp u otros formatos como .jpg, .png, .tiff y .bmp. <p>¡Actualmente tiene <highlight><startIcon /> {{stars}}</highlight> estrellas en GitHub!</p>"
+      "description": "Aplicación de código abierto, escritorio y multiplataforma que te permite al usuario convertir imágenes a WEBP u otros formatos como JPG, PNG, TIFF y BMP. <p>¡Actualmente tiene <highlight><startIcon /> {{stars}}</highlight> estrellas en GitHub!</p>"
     },
     "proyectosYRefrigeracion": {
       "description": "Página oficial aterrizado de Refrigeración y Proyectos S.A. de C.V."
