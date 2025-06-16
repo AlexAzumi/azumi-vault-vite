@@ -1,11 +1,12 @@
 import {
   faArrowUpRightFromSquare,
   faDiagramProject,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { TFunction } from 'i18next'
 import { FC, useCallback, useEffect, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 import PROJECTS from '../../data/projects.json'
 
@@ -119,10 +120,17 @@ const ProjectItem: FC<ProjectItemProps> = ({
           <h2 className='mb-4 text-3xl font-extrabold text-green-600'>
             {name}
           </h2>
-          <p
-            className='text-base/tight text-white'
-            dangerouslySetInnerHTML={{ __html: t(descriptionKey, { stars }) }}
-          />
+          <div className='text-base/tight text-white'>
+            <Trans
+              i18nKey={descriptionKey}
+              components={{
+                p: <p className='mt-2' />,
+                startIcon: <FontAwesomeIcon icon={faStar} />,
+                highlight: <div className='inline-block text-yellow-600' />,
+              }}
+              values={{ stars: stars }}
+            />
+          </div>
         </div>
         {url && (
           <div className='bg-back group/link rounded bg-black text-center text-green-600'>

@@ -11,10 +11,10 @@
   },
   "aboutMe": {
     "title": "Sobre mi",
-    "firstText": "¡Hola!, mi nombre es <div class='inline-block text-green-600'>Alejandro Suárez</div>",
-    "secondText": "Soy <div class='inline-block text-green-600'>desarrollador de software</div> desde 2018 y egresado de la <div class='inline-block text-green-600'>Universidad de Guadalajara</div> de la carrera de <div class='inline-block text-green-600'>Ingeniería en Computación</div>",
-    "thirdText": "Tengo más de tres años de experiencia laboral trabajando con <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> y <div class='inline-block text-green-600'>TypeScript</div>",
-    "fourthText": "También tengo experiencia usando herramientas como <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> y <div class='inline-block text-green-600'>C#</div>",
+    "firstText": "¡Hola!, mi nombre es <hightlight>Alejandro Suárez</hightlight>",
+    "secondText": "Soy <hightlight>desarrollador de software</hightlight> desde 2018 y egresado de la <hightlight>Universidad de Guadalajara</hightlight> de la carrera de <hightlight>Ingeniería en Computación</hightlight>",
+    "thirdText": "Tengo más de tres años de experiencia laboral trabajando con <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> y <hightlight>TypeScript</hightlight>",
+    "fourthText": "También tengo experiencia usando herramientas como <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> y <hightlight>C#</hightlight>",
     "checkProjects": "¡Dale una vista a mis proyectos!"
   },
   "myProjects": {
@@ -24,13 +24,13 @@
       "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano."
     },
     "enLosOjosDeTlachy": {
-      "description": "Videojuego de puzzle y aventura ambientado en un escenario isométrico 2.5D, donde juegas como un pequeño tlacuache que busca forma de evitar los retos que representa su realidad. <br><br>Este juego fue enviado como participación del <i>game jam</i> organizado por Latin America Games Showcase."
+      "description": "Videojuego de puzzle y aventura ambientado en un escenario isométrico 2.5D, donde juegas como un pequeño tlacuache que busca forma de evitar los retos que representa su realidad.<p>Este juego fue enviado como participación del game jam organizado por Latin America Games Showcase.</p>"
     },
     "webpConverter": {
-      "description": "Aplicación de código abierto, escritorio y multiplataforma que te permite al usuario convertir imágenes a .webp u otros formatos como .jpg, .png y .bmp.<br><br>¡Actualmente tiene {{stars}} estrellas en GitHub!"
+      "description": "Aplicación de código abierto, escritorio y multiplataforma que te permite al usuario convertir imágenes a .webp u otros formatos como .jpg, .png, .tiff y .bmp. <p>¡Actualmente tiene <highlight><startIcon /> {{stars}}</highlight> estrellas en GitHub!</p>"
     },
     "proyectosYRefrigeracion": {
-      "description": "Página web oficial de Refrigeración y Proyectos S.A. de C.V."
+      "description": "Página oficial aterrizado de Refrigeración y Proyectos S.A. de C.V."
     },
     "medalOfDarkness": {
       "description": "Juego de puzles para adolescentes como apoyo y mejora de la compresión lectora y razonamiento lógico."
@@ -41,6 +41,6 @@
     "sendEmail": "Enviar correo"
   },
   "footer": {
-    "compiledBy": "Compilado y publicado con <a href='https://netlify.com' target='_blank' class='text-green-600 hover:underline'>Netlify</a>"
+    "data": "Azumi's code © {{currentYear}} | Compilado y publicado con <netlifyLink>Netlify</netlifyLink><divider /><modelCopyright />"
   }
 }

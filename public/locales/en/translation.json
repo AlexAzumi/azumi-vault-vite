@@ -11,26 +11,27 @@
   },
   "aboutMe": {
     "title": "About me",
-    "firstText": "Hello, my name is <div class='inline-block text-green-600'>Alejandro Suárez</div>",
-    "secondText": "I've been a <div class='inline-block text-green-600'>software developer</div> since 2018 and graduated from the <div class='inline-block text-green-600'>University of Guadalajara</div> with a degree in <div class='inline-block text-green-600'>Computer Engineering</div>",
-    "thirdText": "I have more than three years of work experience using <div class='inline-block text-green-600'>React</div>, <div class='inline-block text-green-600'>Tailwind</div>, <div class='inline-block text-green-600'>Node.js</div> and <div class='inline-block text-green-600'>TypeScript</div>",
-    "fourthText": "I also have experience using tools like <div class='inline-block text-green-600'>Unity Engine</div>, <div class='inline-block text-green-600'>React Native</div>, <div class='inline-block text-green-600'>Git</div>, <div class='inline-block text-green-600'>MySQL</div> and <div class='inline-block text-green-600'>C#</div>",
+    "firstText": "Hello, my name is <hightlight>Alejandro Suárez</hightlight>",
+    "secondText": "I've been a <hightlight>software developer</hightlight> since 2018 and graduated from the <hightlight>University of Guadalajara</hightlight> with a degree in <hightlight>Computer Engineering</hightlight>",
+    "thirdText": "I have more than three years of work experience using <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> and <hightlight>TypeScript</hightlight>",
+    "fourthText": "I also have experience using tools like <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> and <hightlight>C#</hightlight>",
     "checkProjects": "Check out my projects!"
   },
   "myProjects": {
     "title": "My projects",
-    "hoverForPreview": "Hover to watch a preview",
+    "hoverForPreview": "Hover or press to watch a preview",
     "xRayExplorerVR": {
-      "description": "VR application focused in learning about the human skeleton."
+      "description": "VR application focused in learning about the human skeleton.",
+      "techologies": ["Unity Engine", "C#", "WebSockets", "LLMs"]
     },
     "enLosOjosDeTlachy": {
-      "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a <i>tlacuache</i> that searches ways to avoid the challenges that their reality presents.<br><br>This game was submitted to a game jam organized by Latin America Games Showcase."
+      "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a tlacuache that searches ways to avoid the challenges that their reality presents.<p>This game was submitted to a game jam organized by Latin America Games Showcase.</p>"
     },
     "webpConverter": {
-      "description": "Open source desktop multi-platform application that allows the user to convert images to .webp and other formats such as .jpg, .png and .bmp.<br><br>At the moment has {{stars}} stars in GitHub!"
+      "description": "Open source desktop multi-platform application that allows the user to convert images to .webp and other formats such as .jpg, .png, .tiff and .bmp.<p>At the moment has <highlight><startIcon /> {{stars}}</highlight> stars in GitHub!</p>"
     },
     "proyectosYRefrigeracion": {
-      "description": "Official webpage for Refrigeración y Proyectos S.A. de C.V."
+      "description": "Official landing page for Refrigeración y Proyectos S.A. de C.V."
     },
     "medalOfDarkness": {
       "description": "Puzzle videogame for teenagers in order to help and improve the reading comprehension and logic reasoning."
@@ -41,6 +42,6 @@
     "sendEmail": "Send email"
   },
   "footer": {
-    "compiledBy": "Compiled and published with <a href='https://netlify.com' target='_blank'>Netlify</a>"
+    "data": "Azumi's code © {{currentYear}} | Compiled and published with <netlifyLink>Netlify</netlifyLink><divider /><modelCopyright />"
   }
 }

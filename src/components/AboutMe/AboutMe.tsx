@@ -1,12 +1,14 @@
 import { faArrowDown, faIdCardClip } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC, useCallback } from 'react'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 import profileImg from '../../assets/img/profile.jpg'
 
 const AboutMe: FC = () => {
   const { t } = useTranslation()
+
+  const hightlightElement = <div className='inline-block text-green-600' />
 
   const scrollToElement = useCallback((id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -29,24 +31,38 @@ const AboutMe: FC = () => {
           <img src={profileImg} className='rounded drop-shadow-xl/50' />
         </div>
         <div className='col-span-6 flex flex-col items-start justify-center text-xl text-white md:col-span-3 xl:col-span-2'>
-          <div
-            className='mb-4 rounded bg-black p-4 shadow'
-            dangerouslySetInnerHTML={{
-              __html: t('aboutMe.firstText'),
-            }}
-          />
-          <div
-            className='mb-4 rounded bg-black p-4 shadow'
-            dangerouslySetInnerHTML={{ __html: t('aboutMe.secondText') }}
-          />
-          <div
-            className='mb-4 rounded bg-black p-4 shadow'
-            dangerouslySetInnerHTML={{ __html: t('aboutMe.thirdText') }}
-          />
-          <div
-            className='rounded bg-black p-4 shadow'
-            dangerouslySetInnerHTML={{ __html: t('aboutMe.fourthText') }}
-          />
+          <div className='mb-4 rounded bg-black p-4 shadow'>
+            <Trans
+              i18nKey='aboutMe.firstText'
+              components={{
+                hightlight: hightlightElement,
+              }}
+            />
+          </div>
+          <div className='mb-4 rounded bg-black p-4 shadow'>
+            <Trans
+              i18nKey='aboutMe.secondText'
+              components={{
+                hightlight: hightlightElement,
+              }}
+            />
+          </div>
+          <div className='mb-4 rounded bg-black p-4 shadow'>
+            <Trans
+              i18nKey='aboutMe.thirdText'
+              components={{
+                hightlight: hightlightElement,
+              }}
+            />
+          </div>
+          <div className='mb-4 rounded bg-black p-4 shadow'>
+            <Trans
+              i18nKey='aboutMe.fourthText'
+              components={{
+                hightlight: hightlightElement,
+              }}
+            />
+          </div>
         </div>
       </div>
 
