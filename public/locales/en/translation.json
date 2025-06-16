@@ -21,8 +21,7 @@
     "title": "My projects",
     "hoverForPreview": "Hover or press to watch a preview",
     "xRayExplorerVR": {
-      "description": "VR application focused in learning about the human skeleton.",
-      "techologies": ["Unity Engine", "C#", "WebSockets", "LLMs"]
+      "description": "VR application focused in learning about the human skeleton."
     },
     "enLosOjosDeTlachy": {
       "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a tlacuache that searches ways to avoid the challenges that their reality presents.<p>This game was submitted to a game jam organized by Latin America Games Showcase.</p>"
