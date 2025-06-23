@@ -3,7 +3,7 @@
     "name": "WebP Converter",
     "cover": "/img/webp-converter.webp",
     "descriptionKey": "myProjects.webpConverter.description",
-    "url": "https://github.com/AlexAzumi/webp-converter",
+    "url": "https://webp-converter.alexazumi.com",
     "videoUrl": "",
     "technologies": ["React", "TypeScript", "Rust", "Tauri", "Vite"]
   },
