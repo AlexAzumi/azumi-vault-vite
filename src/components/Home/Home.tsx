@@ -28,8 +28,7 @@ const Home: FC = () => {
             fov: 60,
           }}
           gl={{
-            antialias: true,
-            powerPreference: 'high-performance',
+            powerPreference: 'default',
             failIfMajorPerformanceCaveat: true,
           }}
           onCreated={({ gl }) => {
@@ -44,11 +43,12 @@ const Home: FC = () => {
         >
           <Suspense fallback={null}>
             <spotLight
-              position={[1, 2, 10]}
               angle={0.5}
-              penumbra={1}
+              castShadow={false}
               decay={0}
-              intensity={Math.PI * 0.5}
+              intensity={Math.PI * 0.3}
+              penumbra={1}
+              position={[1, 2, 10]}
             />
             <ComputerMesh rotation={[0, 0, 0]} />
           </Suspense>
@@ -126,8 +126,14 @@ const ComputerMesh = (props: ThreeElements['mesh']) => {
   })
 
   return (
-    <mesh {...props} ref={meshRef} position={[width / 5, -1.3, 0]}>
-      <primitive object={computer.scene} scale={4} />
+    <mesh
+      {...props}
+      ref={meshRef}
+      position={[width / 5, -1.3, 0]}
+      castShadow={false}
+      receiveShadow={false}
+    >
+      <primitive object={computer.scene} scale={4.3} />
     </mesh>
   )
 }
