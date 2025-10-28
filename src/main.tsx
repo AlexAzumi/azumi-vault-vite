@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'motion/react'
 import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 
@@ -5,13 +6,15 @@ import App from './App.tsx'
 
 import { LoadingScreen } from './components/LoadingScreen'
 
-import './index.css'
 import './i18n.ts'
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Suspense fallback={<LoadingScreen />}>
-      <App />
+      <AnimatePresence mode='wait'>
+        <App />
+      </AnimatePresence>
     </Suspense>
   </StrictMode>,
 )

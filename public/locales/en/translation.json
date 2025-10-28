@@ -6,13 +6,13 @@
     "contact": "Contact"
   },
   "home": {
-    "career": "Computer engineer and software developer",
+    "career": "Computer engineer | Software developer",
     "scrollForMore": "Scroll for more"
   },
   "aboutMe": {
     "title": "About me",
     "firstText": "Hello, my name is <hightlight>Alejandro Suárez</hightlight>",
-    "secondText": "I've been a <hightlight>software developer</hightlight> since 2018 and graduated from the <hightlight>University of Guadalajara</hightlight> with a degree in <hightlight>Computer Engineering</hightlight>",
+    "secondText": "I've been a <hightlight>software developer</hightlight> since 2018 and I recently graduated from <hightlight>University of Guadalajara</hightlight> with a degree in <hightlight>Computer Engineering</hightlight>",
     "thirdText": "I have more than three years of work experience using <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> and <hightlight>TypeScript</hightlight>",
     "fourthText": "I also have experience using tools like <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> and <hightlight>C#</hightlight>",
     "checkProjects": "Check out my projects!"
