@@ -4,6 +4,7 @@ import { Footer } from './components/Footer'
 import { Home } from './components/Home'
 import { MyProjects } from './components/MyProjects'
 import { Navbar } from './components/Navbar'
+import { WorkExperience } from './components/WorkExperience'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Home />
 
       <AboutMe />
+
+      <WorkExperience />
 
       <MyProjects />
 

@@ -32,9 +32,9 @@ const MyProjects: FC = () => {
       <h1 className='relative mb-10 flex justify-center text-center text-2xl font-extrabold text-gray-900 uppercase md:text-3xl lg:text-4xl'>
         <div className='z-10 flex items-center justify-center rounded-full bg-green-600 px-10 py-4'>
           <FontAwesomeIcon icon={faDiagramProject} className='mr-4' />
-          {t('myProjects.title')}
+          {t('my-projects.title')}
         </div>
-        <hr className='absolute top-1/2 w-full translate-y-[-2px] rounded-full border-2 border-green-600' />
+        <hr className='absolute top-1/2 w-full -translate-y-0.5 rounded-full border-2 border-green-600' />
       </h1>
 
       {PROJECTS.map((item, idx) => (
@@ -112,13 +112,13 @@ const ProjectItem: FC<ProjectItemProps> = ({
             <div
               className={`absolute right-0 bottom-0 left-0 bg-black/30 p-3 text-white transition-opacity ${!videoPaused && 'opacity-0!'}`}
             >
-              {t('myProjects.hoverForPreview')}
+              {t('my-projects.hover-for-preview')}
             </div>
           </>
         )}
       </div>
       <div className='z-10 flex flex-col py-6 lg:-translate-x-3 lg:items-start lg:group-even:order-1 lg:group-even:translate-x-3 lg:group-even:items-end'>
-        <div className='mb-4 rounded bg-black p-4 lg:group-even:text-right'>
+        <div className='mb-4 rounded bg-black/60 p-4 backdrop-blur-lg lg:group-even:text-right'>
           <h2 className='mb-4 text-3xl font-extrabold text-green-600'>
             {name}
           </h2>
@@ -134,7 +134,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
             />
           </div>
           <p className='mt-4 text-lg font-bold text-white'>
-            {t('myProjects.technologiesUsed')}
+            {t('my-projects.technologies-used')}
           </p>
           <p className='list-inside list-disc text-white'>
             {technologies.map((item, idx) => {
@@ -147,7 +147,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
           </p>
         </div>
         {url && (
-          <div className='bg-back group/link rounded bg-black text-center text-green-600'>
+          <div className='bg-back group/link rounded bg-black/60 text-center text-green-600 backdrop-blur-lg'>
             <a href={url} target='_blank' className='block p-4'>
               {url} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
               <hr className='w-0 transition-all group-hover/link:w-full' />

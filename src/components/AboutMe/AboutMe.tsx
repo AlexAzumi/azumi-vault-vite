@@ -21,9 +21,9 @@ const AboutMe: FC = () => {
       <h1 className='relative mb-10 flex justify-center text-center text-2xl font-extrabold text-gray-900 uppercase md:text-3xl lg:text-4xl'>
         <div className='z-10 flex items-center justify-center rounded-full bg-green-600 px-10 py-4'>
           <FontAwesomeIcon icon={faIdCardClip} className='mr-4' />
-          {t('aboutMe.title')}
+          {t('about-me.title')}
         </div>
-        <hr className='absolute top-1/2 w-full translate-y-[-2px] rounded-full border-2 border-green-600' />
+        <hr className='absolute top-1/2 w-full -translate-y-0.5 rounded-full border-2 border-green-600' />
       </h1>
 
       <div className='grid grid-cols-6 gap-4 px-4 md:px-2 xl:px-0'>
@@ -31,33 +31,33 @@ const AboutMe: FC = () => {
           <img src={profileImg} className='rounded drop-shadow-xl/50' />
         </div>
         <div className='col-span-6 flex flex-col items-start justify-center text-xl text-white md:col-span-3 xl:col-span-2'>
-          <div className='mb-4 rounded bg-black p-4 shadow'>
+          <div className='mb-4 rounded bg-black/60 p-4 shadow'>
             <Trans
-              i18nKey='aboutMe.firstText'
+              i18nKey='about-me.first-text'
               components={{
                 hightlight: hightlightElement,
               }}
             />
           </div>
-          <div className='mb-4 rounded bg-black p-4 shadow'>
+          <div className='mb-4 rounded bg-black/60 p-4 shadow'>
             <Trans
-              i18nKey='aboutMe.secondText'
+              i18nKey='about-me.second-text'
               components={{
                 hightlight: hightlightElement,
               }}
             />
           </div>
-          <div className='mb-4 rounded bg-black p-4 shadow'>
+          <div className='mb-4 rounded bg-black/60 p-4 shadow'>
             <Trans
-              i18nKey='aboutMe.thirdText'
+              i18nKey='about-me.third-text'
               components={{
                 hightlight: hightlightElement,
               }}
             />
           </div>
-          <div className='mb-4 rounded bg-black p-4 shadow'>
+          <div className='mb-4 rounded bg-black/60 p-4 shadow'>
             <Trans
-              i18nKey='aboutMe.fourthText'
+              i18nKey='about-me.fourth-text'
               components={{
                 hightlight: hightlightElement,
               }}
@@ -72,7 +72,7 @@ const AboutMe: FC = () => {
           onClick={() => scrollToElement('my-projects')}
         >
           <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
-          {t('aboutMe.checkProjects')}
+          {t('about-me.check-projects')}
           <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
         </div>
       </div>

@@ -1,39 +1,57 @@
 {
   "navbar": {
     "home": "Inicio",
-    "aboutMe": "Sobre mí",
-    "myProjects": "Mis proyectos",
+    "about-me": "Sobre mí",
+    "my-projects": "Mis proyectos",
     "contact": "Contacto"
   },
   "home": {
     "career": "Ingeniero en computación y desarrollador de software",
-    "scrollForMore": "Desplaza para conocer más"
+    "sroll-for-more": "Desplaza para conocer más"
   },
-  "aboutMe": {
+  "about-me": {
     "title": "Sobre mi",
-    "firstText": "¡Hola!, mi nombre es <hightlight>Alejandro Suárez</hightlight>",
-    "secondText": "Soy <hightlight>desarrollador de software</hightlight> desde 2018 y egresado de la <hightlight>Universidad de Guadalajara</hightlight> de la carrera de <hightlight>Ingeniería en Computación</hightlight>",
-    "thirdText": "Tengo más de tres años de experiencia laboral trabajando con <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> y <hightlight>TypeScript</hightlight>",
-    "fourthText": "También tengo experiencia usando herramientas como <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> y <hightlight>C#</hightlight>",
-    "checkProjects": "¡Dale una vista a mis proyectos!"
+    "first-text": "¡Hola!, mi nombre es <hightlight>Alejandro Suárez</hightlight>",
+    "second-text": "Soy <hightlight>desarrollador de software</hightlight> desde 2018 y egresado de la <hightlight>Universidad de Guadalajara</hightlight> de la carrera de <hightlight>Ingeniería en Computación</hightlight>",
+    "third-text": "Tengo más de tres años de experiencia laboral trabajando con <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> y <hightlight>TypeScript</hightlight>",
+    "fourth-text": "También tengo experiencia usando herramientas como <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> y <hightlight>C#</hightlight>",
+    "check-projects": "¡Dale una vista a mis proyectos!"
   },
-  "myProjects": {
+  "work-experience": {
+    "title": "Experiencia laboral",
+    "cfe": {
+      "name": "Comisión Federal de Electricidad (CFE)",
+      "job-title": "Desarrollador front end",
+      "time": "Septiembre 2025 - Actualidad"
+    },
+    "t-smart": {
+      "name": "T-Smart",
+      "job-title": "Desarrollador web (freelancer)",
+      "time": "Enero 2020 - Actualidad"
+    },
+    "bixdy": {
+      "name": "Bixdy",
+      "job-title": "Desarrollador full stack (tiempo parcial)",
+      "time": "Octubre 2019 - Enero 2020"
+    }
+  },
+  "my-projects": {
     "title": "Mis proyectos",
-    "hoverForPreview": "Pase el cursor para ver vista previa",
-    "technologiesUsed": "Tecnologías usadas",
-    "xRayExplorerVR": {
+    "hover-for-preview": "Pase el cursor para ver vista previa",
+    "technologies-used": "Tecnologías usadas",
+    "x-ray-explorer-vr": {
       "description": "Aplicación de realidad virtual enfocada en el aprendizaje del esqueleto humano de manera interactiva y divertida."
     },
-    "enLosOjosDeTlachy": {
+    "en-los-ojos-de-tlachi": {
       "description": "Videojuego de puzzle y aventura ambientado en un escenario isométrico 2.5D, donde juegas como un pequeño tlacuache que busca forma de evitar los retos que representa su realidad.<p>Este juego fue enviado como participación del game jam organizado por Latin America Games Showcase.</p>"
     },
-    "webpConverter": {
+    "webp-converter": {
       "description": "Aplicación de código abierto, escritorio y multiplataforma que te permite al usuario convertir imágenes a WEBP u otros formatos como JPG, PNG, TIFF y BMP. <p>¡Actualmente tiene <highlight><startIcon /> {{stars}}</highlight> estrellas en GitHub!</p>"
     },
-    "proyectosYRefrigeracion": {
+    "proyectos-y-refrigeracion": {
       "description": "Página oficial aterrizado de Refrigeración y Proyectos S.A. de C.V."
     },
-    "medalOfDarkness": {
+    "medal-of-darkness": {
       "description": "Juego de puzles para adolescentes como apoyo y mejora de la compresión lectora y razonamiento lógico."
     }
   },

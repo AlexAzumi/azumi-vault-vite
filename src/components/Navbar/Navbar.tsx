@@ -1,5 +1,6 @@
 import {
   faBars,
+  faBriefcase,
   faDiagramProject,
   faEnvelope,
   faHome,
@@ -29,12 +30,17 @@ const Navbar: FC = () => {
       },
       {
         id: 'about-me',
-        title: t('navbar.aboutMe'),
+        title: t('navbar.about-me'),
         icon: faIdCardClip,
       },
       {
+        id: 'work-experience',
+        title: t('navbar.work-experience'),
+        icon: faBriefcase,
+      },
+      {
         id: 'my-projects',
-        title: t('navbar.myProjects'),
+        title: t('navbar.my-projects'),
         icon: faDiagramProject,
       },
       {

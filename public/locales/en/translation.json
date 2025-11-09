@@ -1,39 +1,58 @@
 {
   "navbar": {
     "home": "Home",
-    "aboutMe": "About me",
-    "myProjects": "My projects",
+    "about-me": "About me",
+    "work-experience": "Work experience",
+    "my-projects": "My projects",
     "contact": "Contact"
   },
   "home": {
     "career": "Computer engineer and software developer",
-    "scrollForMore": "Scroll for more"
+    "sroll-for-more": "Scroll for more"
   },
-  "aboutMe": {
+  "about-me": {
     "title": "About me",
-    "firstText": "Hello, my name is <hightlight>Alejandro Suárez</hightlight>",
-    "secondText": "I've been a <hightlight>software developer</hightlight> since 2018 and graduated from the <hightlight>University of Guadalajara</hightlight> with a degree in <hightlight>Computer Engineering</hightlight>",
-    "thirdText": "I have more than three years of work experience using <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> and <hightlight>TypeScript</hightlight>",
-    "fourthText": "I also have experience using tools like <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> and <hightlight>C#</hightlight>",
-    "checkProjects": "Check out my projects!"
+    "first-text": "Hello, my name is <hightlight>Alejandro Suárez</hightlight>",
+    "second-text": "I've been a <hightlight>software developer</hightlight> since 2018 and graduated from the <hightlight>University of Guadalajara</hightlight> with a degree in <hightlight>Computer Engineering</hightlight>",
+    "third-text": "I have more than three years of work experience using <hightlight>React</hightlight>, <hightlight>Tailwind</hightlight>, <hightlight>Node.js</hightlight> and <hightlight>TypeScript</hightlight>",
+    "fourth-text": "I also have experience using tools like <hightlight>Unity Engine</hightlight>, <hightlight>React Native</hightlight>, <hightlight>Git</hightlight>, <hightlight>MySQL</hightlight> and <hightlight>C#</hightlight>",
+    "check-projects": "Check out my projects!"
   },
-  "myProjects": {
+  "work-experience": {
+    "title": "Work experience",
+    "cfe": {
+      "name": "Comisión Federal de Electricidad (CFE)",
+      "job-title": "Front end developer",
+      "time": "September 2025 - Now"
+    },
+    "t-smart": {
+      "name": "T-Smart",
+      "job-title": "Web developer (freelancer)",
+      "time": "January 2020 - Now"
+    },
+    "bixdy": {
+      "name": "Bixdy",
+      "job-title": "Full stack developer (part time)",
+      "time": "October 2019 - January 2020"
+    }
+  },
+  "my-projects": {
     "title": "My projects",
-    "hoverForPreview": "Hover or press to watch a preview",
-    "technologiesUsed": "Technologies used",
-    "xRayExplorerVR": {
+    "hover-for-preview": "Hover or press to watch a preview",
+    "technologies-used": "Technologies used",
+    "x-ray-explorer-vr": {
       "description": "VR application focused on the learning of the human skeleton in a interactive and fun way."
     },
-    "enLosOjosDeTlachy": {
+    "en-los-ojos-de-tlachi": {
       "description": "Puzzle and adventure videogame set in a isometric 2.5D world, in which you can play as a tlacuache that searches ways to avoid the challenges that their reality presents.<p>This game was submitted to a game jam organized by Latin America Games Showcase.</p>"
     },
-    "webpConverter": {
+    "webp-converter": {
       "description": "Open source desktop multi-platform application that allows the user to convert images to WEBP and other formats such as JPG, PNG, TIFF and BMP.<p>At the moment has <highlight><startIcon /> {{stars}}</highlight> stars on GitHub!</p>"
     },
-    "proyectosYRefrigeracion": {
+    "proyectos-y-refrigeracion": {
       "description": "Official landing page for Refrigeración y Proyectos S.A. de C.V."
     },
-    "medalOfDarkness": {
+    "medal-of-darkness": {
       "description": "Puzzle videogame for teenagers in order to help and improve the reading comprehension and logic reasoning."
     }
   },

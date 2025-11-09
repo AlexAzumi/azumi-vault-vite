@@ -2,7 +2,7 @@
   {
     "name": "WebP Converter",
     "cover": "/img/webp-converter.webp",
-    "descriptionKey": "myProjects.webpConverter.description",
+    "descriptionKey": "my-projects.webp-converter.description",
     "url": "https://webp-converter.alexazumi.com",
     "videoUrl": "",
     "technologies": ["React", "TypeScript", "Rust", "Tauri", "Vite"]
@@ -10,7 +10,7 @@
   {
     "name": "X-Ray Explorer VR",
     "cover": "/img/x-ray-explorer-vr.webp",
-    "descriptionKey": "myProjects.xRayExplorerVR.description",
+    "descriptionKey": "my-projects.x-ray-explorer-vr.description",
     "url": "https://github.com/X-Ray-Explorer-VR/x-ray-explorer-vr",
     "videoUrl": "https://xdxd5c6lvk.ufs.sh/f/2d4vbiTJYwq95j5gVj4W2VZht4lOFU6CM8pzJdAKqHcbXL7w",
     "technologies": ["Unity Engine", "C#", "LLMs", "WebSockets", "Oculus"]
@@ -18,7 +18,7 @@
   {
     "name": "RYPSA",
     "cover": "/img/rypsa.webp",
-    "descriptionKey": "myProjects.proyectosYRefrigeracion.description",
+    "descriptionKey": "my-projects.proyectos-y-refrigeracion.description",
     "url": "https://refrigeracionyproyectos.com/",
     "videoUrl": "",
     "technologies": ["React", "TypeScript", "Vite", "TailwindCSS"]
@@ -26,7 +26,7 @@
   {
     "name": "En los ojos de Tlachy",
     "cover": "/img/en-los-ojos-de-tlachy.webp",
-    "descriptionKey": "myProjects.enLosOjosDeTlachy.description",
+    "descriptionKey": "my-projects.en-los-ojos-de-tlachi.description",
     "url": "https://abrah-uwu.itch.io/en-los-ojos-de-tlachy",
     "videoUrl": "https://xdxd5c6lvk.ufs.sh/f/2d4vbiTJYwq99yfoevFPUdMCGznZel7xDJ8Y2NygiIE34Kcr",
     "technologies": ["Unity Engine", "C#"]
@@ -34,7 +34,7 @@
   {
     "name": "Medal of Darkness",
     "cover": "/img/medal-of-darkness.webp",
-    "descriptionKey": "myProjects.medalOfDarkness.description",
+    "descriptionKey": "my-projects.medal-of-darkness.description",
     "url": "",
     "videoUrl": "",
     "technologies": ["Unity Engine", "C#", "PHP"]

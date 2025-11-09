@@ -102,7 +102,7 @@ const Home: FC = () => {
               onClick={() => scrollToElement('about-me')}
             >
               <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
-              {t('home.scrollForMore')}
+              {t('home.sroll-for-more')}
               <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
             </div>
           </div>
