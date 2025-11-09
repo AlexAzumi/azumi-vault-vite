@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useGLTF } from '@react-three/drei'
 import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber'
 import { Bloom, EffectComposer } from '@react-three/postprocessing'
-import { motion } from 'motion/react'
 import { FC, Suspense, useCallback, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import * as THREE from 'three'
@@ -67,37 +66,13 @@ const Home: FC = () => {
       {/* On top data */}
       <div className='absolute top-20 right-0 bottom-20 left-0 flex'>
         <div className='container mx-auto flex -translate-y-10 flex-col items-start justify-center px-6'>
-          <motion.h1
-            className='mb-2 text-7xl font-bold text-green-600 text-shadow-lg/50'
-            initial={{ opacity: 0, translateX: -20 }}
-            whileInView={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 0.8, type: 'tween' }}
-            viewport={{ once: true }}
-          >
+          <h1 className='mb-2 text-7xl font-semibold text-green-600 text-shadow-lg/50'>
             Alejandro Suárez
-          </motion.h1>
-          <motion.h3
-            className='mb-6 text-xl text-white text-shadow-lg/40'
-            initial={{ opacity: 0, translateX: -20 }}
-            whileInView={{
-              opacity: 1,
-              translateX: 0,
-            }}
-            transition={{ delay: 0.2, duration: 0.8, type: 'tween' }}
-            viewport={{ once: true }}
-          >
+          </h1>
+          <h3 className='mb-6 text-xl text-white text-shadow-lg/40'>
             {t('home.career')}
-          </motion.h3>
-          <motion.div
-            className='text-3xl lg:text-2xl'
-            initial={{ opacity: 0, translateX: -20 }}
-            whileInView={{
-              opacity: 1,
-              translateX: 0,
-            }}
-            transition={{ delay: 0.4, duration: 0.8, type: 'tween' }}
-            viewport={{ once: true }}
-          >
+          </h3>
+          <div className='text-3xl lg:text-2xl'>
             <a
               href='https://www.linkedin.com/in/alexazumi/'
               target='_blank'
@@ -119,21 +94,17 @@ const Home: FC = () => {
             >
               <FontAwesomeIcon icon={faItchIo} />
             </a>
-          </motion.div>
+          </div>
           {/* More information */}
           <div className='flex translate-y-20 self-center text-lg text-white md:self-auto'>
-            <motion.div
+            <div
               className='animate-bounce rounded bg-black/40 px-3 py-1 backdrop-blur-sm hover:cursor-pointer md:bg-transparent md:p-0'
               onClick={() => scrollToElement('about-me')}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              viewport={{ once: true }}
             >
               <FontAwesomeIcon icon={faArrowDown} className='mr-3' />
               {t('home.scrollForMore')}
               <FontAwesomeIcon icon={faArrowDown} className='ml-3' />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

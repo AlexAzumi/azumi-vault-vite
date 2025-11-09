@@ -28,7 +28,7 @@ const AboutMe: FC = () => {
 
       <div className='grid grid-cols-6 gap-4 px-4 md:px-2 xl:px-0'>
         <div className='col-span-6 md:col-span-3 xl:col-span-2 xl:col-start-2'>
-          <img src={profileImg} className='rounded' />
+          <img src={profileImg} className='rounded drop-shadow-xl/50' />
         </div>
         <div className='col-span-6 flex flex-col items-start justify-center text-xl text-white md:col-span-3 xl:col-span-2'>
           <div className='mb-4 rounded bg-black p-4 shadow'>
